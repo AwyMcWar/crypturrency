@@ -376,11 +376,7 @@ a:hover {
 }
 
 .footer {
-  background: linear-gradient(
-    90deg,
-    rgba(143, 65, 65, 1) 0%,
-    rgba(11, 69, 129, 0.9979342078628326) 69%
-  );
+  background: rgba(11, 69, 129, 0.9979342078628326);
   display: flex;
   flex-direction: column;
   padding: 20px;
