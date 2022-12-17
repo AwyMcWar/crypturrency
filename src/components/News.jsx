@@ -6,6 +6,7 @@ import { useGetCryptosQuery } from "../services/cryptoAPI";
 import { Reorder } from "framer-motion";
 import DefaultImage from "../images/DefaultImage.jpg";
 import { current } from "@reduxjs/toolkit";
+import Loader from "./Loader";
 
 const { Text, Title } = Typography;
 const { Option } = Select;
@@ -18,7 +19,7 @@ const News = ({ simplified }) => {
     count: simplified ? 6 : 12,
   });
   const { data } = useGetCryptosQuery(100);
-  if (!cryptoNews?.value) return "Loading...";
+  if (!cryptoNews?.value) return <Loader />;
 
   return (
     <Row gutter={[24, 24]}>

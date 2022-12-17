@@ -11,6 +11,7 @@ import {
   TrophyOutlined,
   NumberOutlined,
 } from "@ant-design/icons";
+import Loader from "./Loader";
 
 import { useGetCryptoDetailsQuery } from "../services/cryptoAPI";
 
@@ -21,7 +22,7 @@ const CryptoDetails = () => {
 
   const { data, isFetching } = useGetCryptoDetailsQuery(coinId);
   const cryptoDetails = data?.data?.coin;
-  if (isFetching) return "Loading...";
+  if (isFetching) return <Loader />;
 
   const stats = [
     {
